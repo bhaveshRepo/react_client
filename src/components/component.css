@@ -1,0 +1,48 @@
+.element-button {
+    background-color: transparent;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    box-shadow: 4px 4px;
+}
+
+.element-button:active{
+    position: relative;
+    left: 4px;
+    top: 4px;
+    box-shadow: 0px 0px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    text-align: center;
+    padding: 2px;
+    margin: 4px;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 8px;
+    padding-left: 6px;
+    border: 1px solid black;
+}
+
+input:hover, input:active {
+    box-shadow: 2px 2px 8px ;
+}
+
+.quesinput-container{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
