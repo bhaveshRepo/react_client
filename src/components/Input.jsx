@@ -1,12 +1,14 @@
 import React from 'react'
+import '../assets/components.css'
 
-const Input = ({ value, label, type }) => {
+const Input = ({ value, type, placeholder, onChange }) => {
     return (
-        <div>
-            <label>{label}</label>
-            <br></br>
-            <input type={type} ref={value}/>
-        </div>
+        <input 
+        type={type} 
+        className="form-control" 
+        value={value} 
+        onChange={onChange} 
+        placeholder={placeholder} />
     )
 }
 

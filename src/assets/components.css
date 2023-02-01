@@ -1,0 +1,90 @@
+/* component : Button */
+
+.element-button {
+    background-color: transparent;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    box-shadow: 4px 4px;
+}
+
+.element-button:active {
+    position: relative;
+    left: 4px;
+    top: 4px;
+    box-shadow: 0px 0px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* component : Input */
+
+
+.input-container input {
+    display: inline;
+    text-align: center;
+    padding: 2px;
+    margin: 3px;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 8px;
+    padding-left: 6px;
+    border: 1px solid black;
+}
+
+.input-container input:hover {
+    box-shadow: 2px 2px 6px;
+}
+
+.input-container input:focus{
+    outline: 0;
+    border: 2px solid rgb(7, 147, 241);
+}
+
+/* component : QuesInput */
+
+.quesinput-container{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.question-bar input {
+    font-size: 1.5em;
+    background-color: rgb(239 235 235 / 94%);
+    outline: 0;
+    padding: 4px;
+    padding-left: 1em;
+    margin: 4px;
+    border: 0;
+    border-bottom: 2px solid grey;
+}
+
+.question-bar input:focus {
+    border-bottom: 3px solid rgb(7, 147, 241);
+}
+
+.option-container {
+    display: flex;
+    align-content: space-around;
+}
+
+/* component : Navbar */
+
+/* .navbar-container {
+    background-color: rgb(59, 59, 59);
+    border: 2px solid rgb(226, 226, 226);
+    border-radius: 8px;
+    width: auto;
+    height: 40px;
+} */
