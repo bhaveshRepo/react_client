@@ -79,6 +79,10 @@
     align-content: space-around;
 }
 
+/* .question input:disabled{
+    opacity: 1 ;
+} */
+
 /* component : Navbar */
 
 /* .navbar-container {

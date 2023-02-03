@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Input from './Input'
+import "./questions.css"
 
 const Question = ({ question, option, userAnswer, setUserAnswer, index, answer, showResult }) => {
 
@@ -16,7 +17,7 @@ const Question = ({ question, option, userAnswer, setUserAnswer, index, answer, 
                 <div className="row d-flex w-100 justify-content-center">
                     {option.map((item, i) => (
                         <div key={i} className="col-2">
-                            <div className="form-check" >
+                            <div className="form-check question" >
                                 <input
                                     id={`flexCheckDefault${index}${i}`}
                                     className="form-check-input"
