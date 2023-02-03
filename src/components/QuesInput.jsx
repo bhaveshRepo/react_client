@@ -56,7 +56,7 @@ const QuesInput = ({ remove, data, setData, index }) => {
                     </div>
                     <div className="col-2 align-self-end ">
                         {data.length == 1 || index == data.length - 1
-                        ? <button className="btn btn-dark me-2" onClick={add}>Add More</button>  : null
+                        ? <button className="btn btn-dark me-2" onClick={add}>Add</button>  : null
                         }
                         {   data.length != 1 ?
                                 <button className="btn btn-danger" onClick={remove}>Remove</button> : null
