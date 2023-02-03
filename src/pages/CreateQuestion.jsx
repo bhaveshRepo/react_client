@@ -7,14 +7,12 @@ import QuesInput from '../components/QuesInput'
 import axios from 'axios'
 
 
-function App() {
-  const [count, setCount] = useState([0]);
-  const [uniqueCode, setUniqueCode] = useState();
+function CreateQuestion() {
 
   const [data, setData] = useState([{
-    question: "",
-    option: new Array(4).fill(""),
-    answer: "",
+    option   : new Array(4).fill(""),
+    answer   : "",
+    question : "",
   }])
 
   function remove(key) {
@@ -23,22 +21,11 @@ function App() {
   }
 
   function sendData() {
-    setData(data.filter((item, index) => item.question != ""))
-
     const formData = new FormData();
-    formData.append("data", JSON.stringify(data))
+    formData.append("data", JSON.stringify(data));
 
-    axios.post('http://localhost:9000/question/create', formData, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-      }
-    })
-      .then(res => {
-        console.log(res)
-        if (res.status == 200) {
-          location.replace(res.data.data.link)
-        }
-      })
+    axios.post('http://localhost:9000/question/create', formData)
+      .then(res => res.status == 200 ? alert(`here is your link :  ${res.data.data.link}`) : console.log("Something went wrong"))
       .catch(err => console.log(err))
   }
 
@@ -58,10 +45,10 @@ function App() {
             </div>
           ))
         }
-        <button onClick={() => sendData()}>send</button>
+        <button  className='btn btn-sm btn-dark'  onClick={() => sendData()}>send</button>
       </div>
     </div>
   )
 }
 
-export default App
+export default CreateQuestion

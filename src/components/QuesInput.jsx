@@ -49,19 +49,22 @@ const QuesInput = ({ remove, data, setData, index }) => {
                         <select className="form-select" onChange={(event) => insertValue(event, "answer")} value={data[index]?.answer}>
                             <option value={""}>Select answer</option>
                             {
-                                data[index].option.map((item, key) => 
-                                (<option key={key} value={key + 1}>{item}</option>))
+                                data[index].option.map((item, key) =>
+                                    (<option key={key} value={key}>{item}</option>))
                             }
                         </select>
                     </div>
                     <div className="col-2 align-self-end ">
-                        <button className="btn btn-primary me-2" onClick={add}>Add More</button>
-                        <button className="btn btn-primary" onClick={remove}>Remove</button>
-                    </div>
+                        {data.length == 1 || index == data.length - 1
+                        ? <button className="btn btn-dark me-2" onClick={add}>Add More</button>  : null
+                        }
+                        {   data.length != 1 ?
+                                <button className="btn btn-danger" onClick={remove}>Remove</button> : null
+                        }
                 </div>
             </div>
         </div>
-
+        </div >
     )
 }
 
