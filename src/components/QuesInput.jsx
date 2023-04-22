@@ -59,7 +59,7 @@ const QuesInput = ({ remove, data, setData, index }) => {
                         ? <button className="btn btn-dark me-2" onClick={add}>Add</button>  : null
                         }
                         {   data.length != 1 ?
-                                <button className="btn btn-danger" onClick={remove}>Remove</button> : null
+                                <button className="btn btn-danger" onClick={remove}>Delete</button> : null
                         }
                 </div>
             </div>
